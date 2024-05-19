@@ -1,0 +1,188 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap');
+
+body {
+    background-color: #121215;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: flex;
+}
+
+.body :nth-child(n){
+    flex: 1;
+}
+
+.body :nth-child(2) {
+    flex: 3;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.container .head {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.container .head span {
+    color: #805BF6;
+}
+
+.left {
+    background-color: #18181C;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+.rigth {
+    margin-left: 20px;
+    background-color: #18181C;
+    padding: 1em;
+    border-radius: 15px;
+    position: relative;
+}
+
+.button {
+    background-color: #805BF6;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.8em 1.5em;
+    border-radius: 15px;
+}
+
+.button:hover {
+    background-color: #6A3DCD;
+    cursor: pointer;
+}
+
+.title{
+    color: #9598DF ;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.items {
+    color: #84849E;
+
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.item.active {
+    background-color: #2F2D36;
+}
+
+.tasks .item {
+    background-color: #2F2D36;
+    margin-bottom: 1em;
+    
+}
+
+.tasks .item :nth-child(n) {
+    flex: 1;
+}
+
+
+.tasks .item .description {
+    flex: 12;
+}
+
+.description {
+    color: #CDCED3;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.modal-content {
+    background-color: #2F2D36;
+}
+
+.modal .close{
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    /* top: 1em; */
+    right: 1em;
+}
+
+.modal .close:hover {
+    color: #805BF6;
+    cursor: pointer;
+}
+
+.projects .title span:hover {
+    color: #805BF6;
+    cursor: pointer;
+}
+
+.item {
+    margin-bottom: 1em;
+}
+
+
+
+
+.projects .item.active {
+    background-color: #2F2D36;
+}
+
+.tasks .item span.active {
+    color: #a5a007;
+}
+
+.tasks .item span:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.delete {
+    color: #655353;
+}
+
+.delete:hover {
+    color: rgb(96, 40, 40);
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rigth {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+}
+
+
+
