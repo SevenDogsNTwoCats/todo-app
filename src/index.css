@@ -29,6 +29,10 @@ body {
   'opsz' 24
 }
 
+.container {
+    padding: 15px;
+}
+
 .container .head {
     font-size: 2.2rem;
     font-weight: 700;
@@ -144,7 +148,7 @@ body {
 
 
 
-.projects .item.active {
+.projects .item .active {
     background-color: #2F2D36;
 }
 
@@ -155,6 +159,10 @@ body {
 .tasks .item span:hover {
     color: #fff;
     cursor: pointer;
+}
+
+.tasks .item span.delete:hover {
+    color: rgb(96, 40, 40);
 }
 
 .item:hover {
@@ -172,16 +180,51 @@ body {
 
 
 
+
+
 @media (max-width: 768px) {
     .body {
         display: flex;
         flex-direction: column;
+
+    }
+
+    .container {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .head {
+        padding: 15px;
     }
 
     .rigth {
         margin-left: 0;
         margin-top: 25px;
+        border-radius: 0%;
+
     }
+
+    .left {
+        border-radius: 0%;
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+    .filters .items {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filters .items .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
 }
 
 

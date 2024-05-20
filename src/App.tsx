@@ -113,18 +113,13 @@ function App() {
     setFolders([newFolder, ...folders])
     handleCloseShowFolderModal()
   }
-
-  const handleDeleteFolder = (id: number) => {
-    setShowFolder('All')
-    const folder = folders.filter((file) => file.id === id)[0]
-    const newFolders = folders.filter((file) => file.id !== id)
-    const newTasks = tasks.filter((task) => !folder.tasks.includes(task.id))
-
-    setTasks(newTasks)
-    setFolders(newFolders)
-  }
+  
   const handleShowFolder = (name: string) => {
     setShowFolder(name)
+  }
+  const handleDeleteFolder = (id: number) => {
+    const newFolders = folders.filter((file) => file.id !== id)
+    setFolders(newFolders)
   }
 
   const handleDeleteTask = (id: number) => {
@@ -151,11 +146,11 @@ function App() {
 
   return (
     <>
-      <div className="container d-flex flex-column justify-content-center align-items-center container-app p-4">
+      <div className="container d-flex flex-column justify-content-center align-items-center container-app">
 
         <div className="container head">To<span>Do.</span> App</div>
 
-        <div className="container body  p-4 m-4">
+        <div className="container body">
           <div className=" left ">
             <div className="container filters">
               <div className="title d-flex ">
@@ -190,7 +185,7 @@ function App() {
                   <div onClick={() => { handleShowFolder(file.name) }} className={`item  ${showFolder === file.name ? 'active' : null}`} key={file.id}>
                     <div><span className="material-symbols-outlined">folder</span></div>
                     <div>{file.name}</div>
-                    <div><span onClick={() => handleDeleteFolder(file.id)} className="material-symbols-outlined delete">delete</span></div>                  </div>
+                    <div><span onClick={() => {handleDeleteFolder(file.id)}} className="material-symbols-outlined delete">delete</span></div>                  </div>
                 ))}
               </div>
             </div>
@@ -313,7 +308,7 @@ function App() {
         </Modal.Body>
       </Modal>
 
-      <div className="container text-center p-2 mb-4">
+      <div className="container text-center p-4 mb-4">
         Develop by <a href="https://github.com/SevenDogsNTwoCats/">AE9</a>
       </div>
 
